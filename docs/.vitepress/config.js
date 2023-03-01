@@ -38,6 +38,7 @@ export default {
         items: [
           { text: "Introduction", link: "development/index" },
           { text: "Guideline", link: "development/guideline" },
+          { text: "State Management", link: "development/state-management" },
         ],
       },
       {
