@@ -25,19 +25,19 @@ export default {
     // Sidebar
     sidebar: [
       {
-        text: "Section A",
-        collapsible: true,
+        text: "For Designers",
+        collapsible: false,
         items: [
-          { text: "Introduction", link: "/introduction" },
+          { text: "Introduction", link: "design/index" },
           { text: "Getting Started", link: "/getting-started" },
         ],
       },
       {
-        text: "Section B",
-        collapsible: false,
+        text: "For Developers",
+        collapsible: true,
         items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
+          { text: "Introduction", link: "development/index" },
+          { text: "Guideline", link: "development/guideline" },
         ],
       },
       {
