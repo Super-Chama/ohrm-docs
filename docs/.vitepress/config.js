@@ -1,7 +1,7 @@
 export default {
+  base: '/ohrm-docs/',
   title: "OrangeHRM Dev Docs",
   description: "OrangeHRM developer documentation",
-
   themeConfig: {
     logo: "/logo.png",
     siteTitle: "OrangeHRM Dev Docs",
