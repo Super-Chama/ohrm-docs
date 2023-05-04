@@ -13,7 +13,7 @@
 - sortOrder: A computed property that provides reactive access to the current sort order.
 - onSort: A function that takes a callback and watches the `sortDefinition` property for changes. The callback is executed whenever the sorting definition changes.
 
-### Example
+## Basic Usage
 
 ```js
 import useSort from "./useSort";

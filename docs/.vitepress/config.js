@@ -50,7 +50,7 @@ export default {
           { text: "useDialog", link: "composables/useDialog" },
           { text: "useRepository", link: "composables/useRepository" },
           { text: "useSort", link: "composables/useSort" },
-          { text: "useFilter", link: "composables/useFilter" },
+          { text: "useFilters", link: "composables/useFilters" },
           { text: "usePaginate", link: "composables/usePaginate" },
         ],
       },
