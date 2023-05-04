@@ -18,17 +18,16 @@ location: src/utils/composables/useModal.ts
 - close: a function that returns a Promise that resolves when the modal is closed.
 - listen: a function that takes an eventName string and an executor function, which will be called when the corresponding event is emitted by the modal component.
 
-## Usage
+## Basic Usage
 
 ```vue-html
 <template>
   <div>
     <button @click="openModal">Open Modal</button>
-    <my-modal v-if="isModalOpen" @close="closeModal"></my-modal>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 import useModal from "./useModal";
 import MyModal from "./MyModal.vue";
@@ -38,24 +37,35 @@ export default defineComponent({
     MyModal,
   },
   setup() {
-    const { open, close, modal } = useModal(MyModal);
+    const myModal = useModal(MyModal);
 
     const openModal = () => {
-      open();
+      myModal.open();
     };
 
     const closeModal = () => {
-      close();
+      myModal.close();
     };
 
     return {
       openModal,
       closeModal,
-      isModalOpen: modal.value !== null,
     };
   },
 });
 </script>
+```
+
+## Listening to events
+
+Make sure you have "on" prefixed to your event name.
+    Ex: submitValid -> onSubmitValid
+You can also chain listeners.
+
+```ts
+useModal(MyModal).listen("onSubmitValid", ($event) => {
+        // do your work
+});
 ```
 
 ## Changelog
