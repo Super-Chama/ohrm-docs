@@ -10,8 +10,8 @@
 ## Basic Usage
 
 ```typescript
-import useRepository from "@/composables/useRepository";
-import MyRepository from "@/repositories/MyRepository";
+import MyRepository from "./MyRepository";
+import useRepository from "./useRepository";
 
 export default {
   setup() {

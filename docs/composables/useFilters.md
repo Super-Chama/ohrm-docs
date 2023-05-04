@@ -14,11 +14,12 @@
 ```js
 import useFilters from "./useFilters";
 import MyRepository from "./MyRepository";
+import useRepository from "./useRepository";
 
 export default {
   setup() {
-    const repository = new MyRepository();
-    const { filters, onFilter, serializedFilters } = useFilters(props.repository);
+    const myRepo = useRepository(MyRepository);
+    const { filters, onFilter, serializedFilters } = useFilters(myRepo);
 
     // Register a callback to be executed when a filter value changes
     onFilter(() => {

@@ -18,15 +18,16 @@
 ```js
 import useSort from "./useSort";
 import MyRepository from "./MyRepository";
+import useRepository from "./useRepository";
 
 export default {
   setup() {
-    const repository = new MyRepository();
     const initialSortDef = {
       name: "ASC",
     }
 
-    const { sortField, sortOrder, onSort, sortDefinition } = useSort(repository, initialSortDef);
+    const myRepo = useRepository(MyRepository);
+    const { sortField, sortOrder, onSort, sortDefinition } = useSort(myRepo, initialSortDef);
 
     onSort(() => {
       console.log(`Sorting changed to ${sortField.value} ${sortOrder.value}`);
