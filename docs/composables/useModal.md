@@ -17,15 +17,14 @@
 
 ## Basic Usage
 
-```vue-html
+```vue
 <template>
   <div>
     <button @click="openModal">Open Modal</button>
   </div>
 </template>
-```
 
-```ts
+<script lang="ts">
 import { defineComponent } from "vue";
 import useModal from "./useModal";
 import MyModal from "./MyModal.vue";
@@ -51,6 +50,7 @@ export default defineComponent({
     };
   },
 });
+</script>
 ```
 
 ## Listening to events
