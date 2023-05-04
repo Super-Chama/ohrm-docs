@@ -1,8 +1,5 @@
----
-location: src/utils/composables/useModal.ts
----
-
 # useModal
+- `src/utils/composables/useModal.ts`
 
 ## Args
 
@@ -26,8 +23,9 @@ location: src/utils/composables/useModal.ts
     <button @click="openModal">Open Modal</button>
   </div>
 </template>
+```
 
-<script lang="ts">
+```ts
 import { defineComponent } from "vue";
 import useModal from "./useModal";
 import MyModal from "./MyModal.vue";
@@ -53,13 +51,13 @@ export default defineComponent({
     };
   },
 });
-</script>
 ```
 
 ## Listening to events
 
 Make sure you have "on" prefixed to your event name.
-    Ex: submitValid -> onSubmitValid
+- Ex: submitValid -> *onSubmitValid*
+
 You can also chain listeners.
 
 ```ts

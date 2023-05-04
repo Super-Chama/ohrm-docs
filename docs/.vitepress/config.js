@@ -47,7 +47,7 @@ export default {
         items: [
           { text: "Introduction", link: "composables/index" },
           { text: "useModal", link: "composables/useModal" },
-          { text: "useDialog", link: "composables/useModal" },
+          { text: "useDialog", link: "composables/useDialog" },
           { text: "useRepo", link: "composables/useRepo" },
           { text: "useSort", link: "composables/useSort" },
           { text: "useFilter", link: "composables/useFilter" },
