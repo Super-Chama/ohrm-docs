@@ -42,16 +42,21 @@ export default {
         ],
       },
       {
-        text: "Section C",
+        text: "Composables",
         collapsible: true,
         items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
+          { text: "Introduction", link: "composables/index" },
+          { text: "useModal", link: "composables/useModal" },
+          { text: "useDialog", link: "composables/useModal" },
+          { text: "useRepo", link: "composables/useRepo" },
+          { text: "useSort", link: "composables/useSort" },
+          { text: "useFilter", link: "composables/useFilter" },
+          { text: "usePaginate", link: "composables/usePaginate" },
         ],
       },
     ],
     footer: {
-      copyright: "Copyright © 2022 OrangeHRM",
+      copyright: "Copyright © 2023 OrangeHRM",
     },
     markdown: {
       theme: "material-palenight",
