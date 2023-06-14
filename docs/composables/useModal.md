@@ -83,9 +83,14 @@ Second parameter of useModal function is to pass props to your component
 You can also pass reactive properties.
 
 ```ts
+
+const showAll = ref(false);
+
 useModal(MyModal, {
   title: "Some Title",
   content: "Hello World!"
+  showAll: showAll // this will be passed reactively
+  showAll: showAll.value // this wont be reactive, false will be passed
 })
 ```
 
