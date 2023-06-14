@@ -58,12 +58,35 @@ export default defineComponent({
 Make sure you have "on" prefixed to your event name.
 - Ex: submitValid -> *onSubmitValid*
 
+```ts
+const modal = useModal(MyModal);
+
+modal.listen("onSubmitValid", ($event) => {
+  // do your work
+})
+```
+
 You can also chain listeners.
 
 ```ts
-useModal(MyModal).listen("onSubmitValid", ($event) => {
-        // do your work
-});
+useModal(MyModal)
+  .listen("onSubmitValid", ($event) => {
+    // do your work
+  }).listen("onClick", ($event) => {
+    // do your work
+  });
+```
+
+## Passing props
+
+Second parameter of useModal function is to pass props to your component
+You can also pass reactive properties.
+
+```ts
+useModal(MyModal, {
+  title: "Some Title",
+  content: "Hello World!"
+})
 ```
 
 ## Changelog
